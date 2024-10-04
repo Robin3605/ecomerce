@@ -1,9 +1,12 @@
+import CardPages from "../layout/CardPages"
 
 
-export const Home = () => {
+const Home = () => {
   return (
-    <div>Home</div>
+    <section className="flex flex-col items-center justify-center">
+      <CardPages />
+    </section>
   )
 }
 
-export default Home;
+export default Home
