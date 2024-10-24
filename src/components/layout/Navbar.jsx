@@ -2,11 +2,10 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 import { useState } from "react";
 import CartWidget from "../common/CartWidget";
-// import { useCart } from "../common/CartProvider";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-//   const { cartCount } = useCart();
+
   const [openMenu, setOpenMenu] =  useState(false)
 
   
@@ -34,7 +33,7 @@ const Navbar = () => {
             </div>
             <Link to={'/cart'} className='mx-4 my-4 flex items-center'>
                   <CartWidget className='cursor-pointer text-2xl text-slate-300 hover:text-white'/>
-                {/* <span className='text-2xl text-slate-300'>{cartCount}</span> */}
+                
                 <span className='text-2xl text-slate-300'>0</span>
             </Link>
         </div>

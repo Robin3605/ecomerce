@@ -1,5 +1,5 @@
 
-// import {products} from '../../products';
+
 import { Link } from "react-router-dom";
 import { FaCartPlus } from "react-icons/fa6";
 
