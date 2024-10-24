@@ -41,11 +41,12 @@ const Navbar = () => {
             <div className='absolute top-14 left-60 right-0 bottom-0 bg-black bg-opacity-50 flex justify-center items-start z-10 py-4'>
                 <div className='bg-white p-4 rounded-lg'>
                     <IoMdClose className='cursor-pointer text-3xl text-black' onClick={() => setOpenMenu(!openMenu)}/>
-                    <ul className='list-none text-black'>
-                        <li className='cursor-pointer py-2'><a to='/'>Home</a></li>
-                        <li className='cursor-pointer py-2'><a to='/about'>About</a></li>
-                        <li className='cursor-pointer py-2'><a to='/products'>Products</a></li>
-                        <li className='cursor-pointer py-2'><a to='/pay'>Pay</a></li>
+                    <ul className='list-none text-black py-4'>
+                        <Link to='/'><li className='cursor-pointer hover:text-slate-400 py-2'>Home</li></Link>
+                        <Link to='/category/Watch'><li className='cursor-pointer hover:text-slate-400 py-2'>SmartWatch</li></Link>
+                        <Link to='/category/SmartPhone'><li className='cursor-pointer hover:text-slate-400 py-2'>Iphone</li></Link>
+                        <Link to='/category/Airpods'><li className='cursor-pointer hover:text-slate-400 py-2'>Airpods</li></Link>
+                        <Link to='/category/Computers'><li className='cursor-pointer hover:text-slate-400 py-2'>MacBook</li></Link>
                     </ul>
                 </div>
             </div>
