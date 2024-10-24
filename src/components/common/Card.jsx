@@ -1,35 +1,29 @@
-import { FaShoppingCart } from "react-icons/fa";
 
+// import {products} from '../../products';
+import { Link } from "react-router-dom";
+import { FaCartPlus } from "react-icons/fa6";
 
-export const Card = ({title, description, price, stock, image}) => {
+const Card = ({id, title, price, image, stock, description, category}) => {
   return (
-    <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 p-2 px-4 ">
-      <div className="flex flex-col items-center justify-center rounded-lg bg-slate-200 shadow-secondary-1 dark:bg-surface-dark h-full">
-        <div className="w-full h-48 overflow-hidden py-4">
-          <img
-            className="rounded-t-lg w-full h-full object-contain"
-            src={image}
-            alt="" />
-        </div>
-        <div className="p-4 text-surface dark:text-white w-full">
-          <h2 className="mb-2 text-center text-black text-lg font-medium leading-tight">{title}</h2>
-          <p className="mb-2 text-center text-black text-sm">{description}</p>
-          <p className="mb-2 text-center text-black font-bold">${price}</p>
-          <p className="mb-2 text-center text-black text-sm">Stock: {stock}</p>
-          
-          <div className="flex justify-center">
-            <button
-              type="button"
-              className="inline-block rounded bg-primary px-4 py-2 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
-              data-twe-ripple-init
-              data-twe-ripple-color="light">
-              <FaShoppingCart className="text-xl text-black"/>
-            </button>
+    <section className="flex justify-center flex-wrap ">
+      
+        <div key={id} className="border border-gray-300 rounded-md m-2.5 p-2.5 w-72 hover:translate-x-1 hover:translate-y-1 transform duration-500  hover:bg-[#505050] hover:text-slate-100 ">
+          <img src={image} alt={title} className="w-full h-[240px] rounded-lg" />
+          <h2 className="text-lg font-semibold mt-2.5 mb-2.5">{title}</h2>
+          <h3 className="text-base font-medium mt-2.5 mb-2.5">{description}</h3>
+          <div className="flex justify-between">
+            <p className="text-base font-medium mt-2.5 mb-2.5">${price}</p>
+            <p className="text-base font-medium mt-2.5 mb-2.5">Stock: {stock}</p>
+            <h3 className="text-base font-medium mt-2.5 mb-2.5">{category}</h3>
           </div>
+          <FaCartPlus className="cursor-pointer text-2xl text-slate-400 mb-2 hover:text-slate-100" />
+          <Link to={`/Detail/${id}`} className="flex justify-center items-center text-center border-solid border-2 border-slate-400 rounded-lg hover:bg-slate-50 hover:text-slate-900">
+            <button className="justify-center items-center text-center">More</button>
+          </Link>
         </div>
-      </div>
-    </div>
+      
+    </section>
   )
 }
 
-export default Card;
+export default Card
