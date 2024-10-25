@@ -1,6 +1,6 @@
+import Counter from "../../common/Counter"
 
-
-const ItemDetail = ({ item }) => {
+const ItemDetail = ({ item, agregarAlCarrito }) => {
   return (
     <section className="flex justify-center flex-wrap ">
       
@@ -13,7 +13,7 @@ const ItemDetail = ({ item }) => {
             <p className="text-base font-medium mt-2.5 mb-2.5">Stock: {item.stock}</p>
             <h3 className="text-base font-medium mt-2.5 mb-2.5">{item.category}</h3>
           </div>
-          
+          <Counter stock={item.stock} agregarAlCarrito={agregarAlCarrito} />
         </div>
       
     </section>
@@ -21,3 +21,5 @@ const ItemDetail = ({ item }) => {
 }
 
 export default ItemDetail
+
+
