@@ -35,7 +35,7 @@ const Navbar = () => {
             <Link to={'/cart'} className='mx-4 my-4 flex items-center'>
                   <CartWidget className='cursor-pointer text-2xl text-slate-300 hover:text-white'/>
                 {/* <span className='text-2xl text-slate-300'>{cartCount}</span> */}
-                <span className='text-2xl text-slate-300'>0</span>
+                
             </Link>
         </div>
         {openMenu && (
