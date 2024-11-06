@@ -4,71 +4,43 @@ import { HiOutlineMinusSmall } from "react-icons/hi2";
 import { FaCartPlus } from "react-icons/fa6";
 
 
-const Counter = ({ stock, agregarAlCarrito }) => {
-    const [contador, setContador] = useState(0);
+const Counter = ({ stock, agregarAlCarrito, quantityInCart }) => {
+    const [contador, setContador] = useState(1);
 
-    const sumar = () => {
-      stock > contador ? setContador(contador + 1) : alert("stock maximo");
+    const onAdd = () => {
+      stock - quantityInCart > contador ? setContador(contador + 1) : alert("agotado");
     };
     const restar = () => {
-      contador >0 && setContador(contador - 1) ;
+      contador > 1 && setContador(contador - 1) ;
     };
 
   return (
     <section>
       <div className="flex justify-center items-center gap-6">
-        <button onClick={sumar}
-          className="cursor-pointer text-3xl text-slate-400 mb-2 hover:text-slate-100 border-solid border-2 border-slate-400 rounded-lg">
-            <IoAdd/>
-        </button>
-        <h2 className="text-3xl text-slate-400 mb-2 ">{contador}</h2>
+        {
+          stock - quantityInCart > contador
+            ? <button onClick={onAdd} className="cursor-pointer text-3xl text-slate-400 mb-2 hover:text-slate-100 border-solid border-2 border-slate-400 rounded-lg"><IoAdd /></button>
+            : <button className=" display-none text-3xl text-slate-200 mb-2  border-solid border-2 border-slate-400 rounded-lg"><IoAdd /></button> 
+        }
+        {
+           contador  <= stock - quantityInCart
+            ? <span className="text-3xl text-slate-300">{contador}</span>
+            : <span className="text-3xl text-slate-300">{contador}</span>
+        }
         <button onClick={restar}
           className="cursor-pointer text-3xl text-slate-400 mb-2 hover:text-slate-100 border-solid border-2 border-slate-400 rounded-lg"><HiOutlineMinusSmall/>
         </button>
       </div>
-      <button onClick={() => agregarAlCarrito(contador)}
-        className="cursor-pointer text-3xl text-slate-400 mb-2 hover:text-slate-100 px-3"
-        ><FaCartPlus  />
-      </button>
+      {
+        stock - quantityInCart >= contador
+          ? <button onClick={() => agregarAlCarrito(contador)}
+            className="cursor-pointer text-3xl text-slate-400 mb-2 hover:text-slate-100  rounded-lg"><FaCartPlus /></button>
+          : <button className="cursor-pointer text-3xl text-slate-400 mb-2 hover:text-slate-100 border-solid border-2 border-slate-400 rounded-lg"><FaCartPlus /></button>
+      }
     </section>
   )
 }
 
 export default Counter
 
-// import { useState } from "react";
 
-// const Counter = ({ stock, agregarAlCarrito }) => {
-//   // 10 - 10
-//   const [contador, setContador] = useState(0);
-
-//   const sumar = () => {
-//     // if (stock > contador) {
-//     //   setContador(contador + 1);
-//     // } else {
-//     //   alert("stock maximo");
-//     // }
-//     stock > contador ? setContador(contador + 1) : alert("stock maximo");
-//   };
-//   const restar = () => {
-//     setContador(contador - 1);
-//   };
-
-//   return (
-//     <div
-//       style={{
-//         margin: "50px",
-//       }}
-//     >
-//       <button onClick={sumar}>sumar</button>
-//       <h2>Contador = {contador}</h2>
-//       <button onClick={restar}>restar</button>
-
-//       <button onClick={() => agregarAlCarrito(contador)}>
-//         Agregar al carrito
-//       </button>
-//     </div>
-//   );
-// };
-
-// export default Counter;

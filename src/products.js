@@ -1,20 +1,21 @@
 export const products = [
     {
         id: '1',
-        title: 'iphone',
+        title: 'Iphone',
         price: 1000,
         stock: 20,
         image: 'https://i.pinimg.com/564x/87/d0/b7/87d0b700e6c9d75635b030b23f58b737.jpg',
-        description: 'este es el ihone 16 pro max',
+        description: 'This is the Iphone 16 pro max',
+        discount: 10,
         category: 'SmartPhone'
     },
     {
         id: '2',
-        title: 'iphone',
+        title: 'Iphone',
         price: 700,
         stock: 30,
         image: 'https://i.pinimg.com/736x/63/eb/00/63eb0075dc44f706ec9df86522a36003.jpg',
-        description: 'este es el ihone 16 plus',
+        description: 'This is the Iphone  16 plus',
         category: 'SmartPhone'
     },
     {
@@ -23,7 +24,8 @@ export const products = [
         price: 500,
         stock: 25,
         image: 'https://i.pinimg.com/564x/a5/ef/ba/a5efbaa48ebf441cacdd8bf942d32667.jpg',
-        description: 'Apple watch ultre 2 49mm',
+        description: 'Apple watch ultra 2 49mm',
+        discount: 15,
         category: 'Watch'
     },
     {
@@ -51,6 +53,7 @@ export const products = [
         stock: 20,
         image: 'https://i.pinimg.com/564x/36/d8/9c/36d89c9ded869ddcaf8a77d22133db90.jpg',
         description: 'Airpods pro',
+        discount: 30,
         category: 'Airpods'
     },
     {
@@ -78,7 +81,8 @@ export const products = [
         stock: 25,
         image: 'https://i.pinimg.com/564x/60/9b/31/609b3143c6ac3d80336620b6619a00e3.jpg',
         description: 'Apple watch ultra yellow 2 49mm',
-        category: 'Watch'
+        discount: 20,
+        category: 'Watch',
     },
     {
         id: '10',
