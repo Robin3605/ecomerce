@@ -1,8 +1,8 @@
-
 import { useState, useEffect } from "react";
 import { products } from "../../../products";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
+
 
 export const ItemListContainer = () => {
   const { name } = useParams(); 
