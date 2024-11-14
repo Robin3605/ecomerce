@@ -18,23 +18,23 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     const getProduct = async () => {
-      setLoading(true); // Asegúrate de establecer loading en true al inicio
+      setLoading(true); 
       try {
         const productsCollection = collection(db, "products");
         const docRef = doc(productsCollection, id);
-        const res = await getDoc(docRef); // Usa await aquí para manejar la promesa
+        const res = await getDoc(docRef); 
         setItem({ ...res.data(), id: res.id });
       } catch (error) {
         console.log(error);
       } finally {
-        setLoading(false); // Asegúrate de que loading se establezca en false al final
+        setLoading(false); 
       }
     };
 
     getProduct();
 
     return () => {
-      setItem({}); // Limpia el estado del item al desmontar el componente
+      setItem({});
     };
   }, [id]);
 

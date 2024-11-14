@@ -15,9 +15,11 @@ const Card = ({id, title, price, image, category}) => {
             <h3 className="text-base font-medium mt-2.5 mb-2.5">{category}</h3>
           </div>
           
-          <Link to={`/Detail/${id}`} className="flex justify-center items-center text-center border-solid border-2 border-slate-400 rounded-lg hover:bg-slate-50 hover:text-slate-900">
-            <button className="justify-center items-center text-center">More</button>
-          </Link>
+          <div className="flex justify-center items-center">
+            <Link to={`/Detail/${id}`} className="flex  w-[150px] justify-center items-center text-center border-solid border-2 border-slate-400 rounded-lg hover:bg-slate-50 hover:text-slate-900">
+              <button className="justify-center items-center text-center py-2">More</button>
+            </Link>
+          </div>
         </div>
       
     </section>

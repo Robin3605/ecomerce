@@ -1,12 +1,204 @@
-
+import { Link } from "react-router-dom";
+import { FaFacebookF } from "react-icons/fa";
+import { BsInstagram } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaApple } from "react-icons/fa";
+import { FaGooglePlay } from "react-icons/fa";
+import { Outlet } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div></div>
-  )
-}
+    <footer>
+      <Outlet />
+      <div className="mt-8 bg-[#0d0343] pt-9">
+        <div className="mx-auto w-full max-w-[1166px] px-4 xl:px-0">
+          <div className="flex flex-col justify-between sm:px-[18px] md:flex-row md:px-10">
+            <div className="md:w-[316px]">
+              <div className="text-[18px] font-medium text-white">
+                <h1 className="text-white font-extrabold">
+                  <span className="text-rose-600">my</span>LOGO
+                </h1>
+              </div>
+              <p className="mt-[18px] text-[15px] font-normal text-white/[80%]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+                fugit non. Incidunt dolorum adipisci, tempore asperiores nemo
+                odio facere officiis enim animi placeat eaque nesciunt alias
+                beatae id, at dicta.
+              </p>
+              <div className="mt-[18px] flex gap-4">
+                <Link className="hover:scale-110" target="_blank" href="#">
+                  <FaFacebookF />
+                </Link>
+                <Link className="hover:scale-110" target="_blank" href="/">
+                 <BsInstagram />
+                </Link>
+                <Link className="hover:scale-110" target="_blank" href="/">
+                  <FaGithub />
+                </Link>
+                <Link className="hover:scale-110" target="_blank" href="">
+                  <FaLinkedin />
+                </Link>
+              </div>
+            </div>
+            <div className="md:w-[316px]">
+              <div className="mt-[23px] flex">
+                <div className="flex h-[38px] w-[38px] items-center justify-center rounded-[75%]">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    
+                  </svg>
+                </div>
+                <div className="ml-[18px]">
+                  <Link
+                    href="tel:+911800123444"
+                    className="font-Inter text-[14px] font-medium text-white"
+                  >
+                    +91 1800123444
+                  </Link>
+                  <p className="font-Inter text-[12px] font-medium text-white">
+                    Support Number
+                  </p>
+                </div>
+              </div>
+              <div className="mt-[23px] flex">
+                <div className="flex h-[38px] w-[38px] items-center justify-center rounded-[75%]">
+                  <svg
+                    width="20"
+                    height="15"
+                    viewBox="0 0 20 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    
+                  </svg>
+                </div>
+                <div className="ml-[18px]">
+                  <Link
+                    href="mailto:help@lorem.com"
+                    className="font-Inter text-[14px] font-medium text-[#fff]"
+                  >
+                    help@lorem.com
+                  </Link>
+                  <p className="font-Inter text-[12px] font-medium text-[#fff]">
+                    Support Email
+                  </p>
+                </div>
+              </div>
+              <div className="mt-[23px] flex">
+                <div className="flex h-[38px] w-[38px] items-center justify-center rounded-[75%]">
+                  <svg
+                    width="18"
+                    height="21"
+                    viewBox="0 0 18 21"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    
+                  </svg>
+                </div>
+                <div className="ml-[18px]">
+                  <Link
+                    href="mailto:help@lorem.com"
+                    className="font-Inter text-[14px] font-medium text-[#fff]"
+                  >
+                    Sub Nerul, Mumbia, India, 123456
+                  </Link>
+                  <p className="font-Inter text-[12px] font-medium text-white">
+                    Address
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="mt-6 flex w-full flex-col justify-between text-white sm:flex-row md:mt-0 md:max-w-[341px]">
+              <div className="">
+                <p className="text-deutziawhite font-inter text-[18px] font-medium leading-normal">
+                  Pages
+                </p>
+                <ul>
+                  <li className="mt-[15px]">
+                    <Link
+                      className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                      href="/"
+                    >
+                      Home
+                    </Link>
+                  </li>
+                  <li className="mt-[15px]">
+                    <Link
+                      className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                      href="/our-tutors"
+                    >
+                      News
+                    </Link>
+                  </li>
+                  <li className="mt-[15px]">
+                    <Link
+                      className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                      href="/become-Link-tutor"
+                    >
+                      Contact
+                    </Link>
+                  </li>
+                  <li className="mt-[15px]">
+                    <Link
+                      className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                      href="/plans-and-pricing"
+                    >
+                      Plans and pricing
+                    </Link>
+                  </li>
+                  <li className="mt-[15px]">
+                    <Link
+                      className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                      href="/terms-and-conditions"
+                    >
+                      Terms and conditions
+                    </Link>
+                  </li>
+                  <li className="mt-[15px]">
+                    <Link
+                      className="text-deutziawhite hover:text-deutziawhite/80 font-inter text-[15px] font-normal hover:font-semibold"
+                      href="/privacy-policy"
+                    >
+                      Privcay policy
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="mt-6 flex flex-col gap-4 sm:mt-0">
+                <p className="text-deutziawhite font-inter text-[18px] font-medium">
+                  Download the app
+                </p>
+                <div className="flex gap-4 sm:flex-col">
+                  <Link target="_blank" href="#">
+                    <FaApple />
+                  </Link>
+                  <Link target="_blank" href="#">
+                    <FaGooglePlay />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr className="mt-[30px] text-white" />
+          <div className="flex items-center justify-center pb-8 pt-[9px] md:py-8">
+            <p className="text-[10px] font-normal text-white md:text-[12px]">
+              © Copyright 2024 All Rights Reserved by ROBIN. PVT. LTD
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
 
 
 
@@ -19,79 +211,3 @@ export default Footer
 
 
 
-// import  { useState, useEffect } from 'react';
-// import { products } from "../../products";
-
-// const Footer = () => {
-//   const [indiceActual, setIndiceActual] = useState(0);
-
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setIndiceActual(prev => (prev + 1) % products.length);
-//     }, 6000);
-//     return () => clearInterval(interval);
-//   }, []);
-
-//   return (
-//     <footer className='py-4 mx-4 justify-center items-center  overflow-hidden'>
-//         <div 
-//           className="flex transition-transform duration-1000 ease-in-out w-[500px] h-[300px]  mx-4 items-center rounded-lg"
-//             style={{ transform: `translateX(-${indiceActual * 100}%)` }} // Desplazamiento
-//         >
-//           {products.map((producto, index) => (
-//             <div 
-//               key={index} 
-//               className="flex-shrink-0 w-full h-full flex flex-col justify-center items-center bg-orange-800 p-4 opacity-0 transition-opacity duration-1000 delay-[0.5s * ${index}]"
-//               style={{ opacity: indiceActual === index ? 1 : 0 }} // Controla la opacidad
-//             >
-//               <img 
-//                 src={producto.image} 
-//                 alt={producto.description} 
-//                 className="w-[250px] h-[250px] object-contain mb-2"
-//               />
-//               <h2 className="text-white mb-1">{producto.title}</h2>
-//             </div>
-//           ))}
-//         </div>
-//     </footer>
-//   )
-// }
-
-// export default Footer
-
-// import React, { useState, useEffect } from 'react';
-
-// const Carousel = ({ productos }) => {
-//     const [indiceActual, setIndiceActual] = useState(0);
-
-//     useEffect(() => {
-//         const interval = setInterval(() => {
-//             setIndiceActual(prev => (prev + 1) % productos.length); // Cambia al siguiente producto
-//         }, 3000); // Cambia cada 3 segundos
-
-//         return () => clearInterval(interval); // Limpiar el intervalo al desmontar
-//     }, [productos.length]);
-
-//     return (
-//         <div className="overflow-hidden w-full h-[300px] relative">
-//             <div 
-//                 className="flex transition-transform duration-500"
-//                 style={{ transform: `translateX(-${indiceActual * 100}%)` }} // Desplazamiento
-//             >
-//                 {productos.map((producto, index) => (
-//                     <div key={index} className="flex-shrink-0 w-full h-full flex flex-col justify-center items-center bg-orange-600 p-4">
-//                         <img 
-//                             src={producto.image} 
-//                             alt={producto.description} 
-//                             className="w-[200px] h-[150px] object-contain mb-2"
-//                         />
-//                         <h2 className="text-white mb-1">{producto.title}</h2>
-//                         <p className="text-white font-bold">Descuento: {producto.discount}%</p>
-//                     </div>
-//                 ))}
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default Carousel;

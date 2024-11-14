@@ -18,6 +18,17 @@ const Counter = ({ stock, agregarAlCarrito, quantityInCart }) => {
   return (
     <section>
       <div className="flex justify-center items-center gap-6">
+        <button
+          onClick={restar}
+          className="cursor-pointer text-3xl text-slate-400 mb-2 hover:text-slate-100 border-solid border-2 border-slate-400 rounded-lg"
+          >
+          <HiOutlineMinusSmall />
+        </button>
+          {contador <= stock - quantityInCart ? (
+            <span className="text-3xl text-slate-300">{contador}</span>
+          ) : (
+            <span className="text-3xl text-slate-300">{contador}</span>
+          )}
         {stock - quantityInCart > contador ? (
           <button
             onClick={onAdd}
@@ -30,17 +41,6 @@ const Counter = ({ stock, agregarAlCarrito, quantityInCart }) => {
             <IoAdd />
           </button>
         )}
-        {contador <= stock - quantityInCart ? (
-          <span className="text-3xl text-slate-300">{contador}</span>
-        ) : (
-          <span className="text-3xl text-slate-300">{contador}</span>
-        )}
-        <button
-          onClick={restar}
-          className="cursor-pointer text-3xl text-slate-400 mb-2 hover:text-slate-100 border-solid border-2 border-slate-400 rounded-lg"
-        >
-          <HiOutlineMinusSmall />
-        </button>
       </div>
       {stock - quantityInCart >= contador ? (
         <button
@@ -50,8 +50,8 @@ const Counter = ({ stock, agregarAlCarrito, quantityInCart }) => {
           <FaCartPlus />
         </button>
       ) : (
-        <button className="cursor-pointer text-3xl text-slate-400 mb-2 hover:text-slate-100 border-solid border-2 border-slate-400 rounded-lg">
-          <FaCartPlus />
+        <button className="cursor-pointer  text-3xl text-slate-400 mb-2 hover:text-slate-100 border-solid border-2 border-slate-400 rounded-lg">
+          <FaCartPlus  />
         </button>
       )}
     </section>
@@ -59,5 +59,9 @@ const Counter = ({ stock, agregarAlCarrito, quantityInCart }) => {
 };
 
 export default Counter;
+
+
+
+
 
 

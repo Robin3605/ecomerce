@@ -1,4 +1,3 @@
-
 import Navbar from "./components/layout/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ItemListContainer } from "./components/pages/itemListContainer/ItemListContainer";
@@ -16,18 +15,19 @@ const App = () => {
       <BrowserRouter>
         <CartContextProvider>
           <Toaster richColors />
-          {/* <Navbar /> */}
+
           <Routes>
             <Route element={<Navbar />}>
-            <Route path="/" element={<ItemListContainer />} />
-            <Route path="/category/:name" element={<ItemListContainer />} />
-            <Route path="/Detail/:id" element={<ItemDetailContainer />} />
+              <Route element={<Footer />}>
+                <Route path="/" element={<ItemListContainer />} />
+                <Route path="/category/:name" element={<ItemListContainer />} />
+                <Route path="/Detail/:id" element={<ItemDetailContainer />} />
+              </Route>
             </Route>
             <Route path="/cart" element={<CartContainer />} />
             <Route path="/form" element={<FormContainer />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>
-          <Footer />
         </CartContextProvider>
       </BrowserRouter>
     </main>

@@ -36,18 +36,3 @@ const ItemList = () => {
 
 export default ItemList;
 
-{
-  /* <button 
-      onClick={funcionParaAgregar}
-      className="text-white"
-      >Cargar productos varios</button> */
-}
-
-// const funcionParaAgregar = () => {
-//   const productsCollection = collection(db, "products");
-//   // addDoc(productsCollection , {price:123, title: "123"} );
-
-//   products.forEach((product) => {
-//     addDoc(productsCollection, product);
-//   });
-// };
